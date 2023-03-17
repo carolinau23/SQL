@@ -1,0 +1,46 @@
+--Create a clothing store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, quantity INTEGER, price INTEGER, size INTEGER);
+
+INSERT INTO store VALUES (1, "crop top", 25, 5, "s, m, l, xl");
+INSERT INTO store VALUES (2, "long sleeve", 30, 7, "s, m, l, xl");
+INSERT INTO store VALUES (3, "pullover hoodie", 18, 20, "s, m, l, xl");
+INSERT INTO store VALUES (4, "zipup hoodie", 20, 25, "s, m, l, xl");
+INSERT INTO store VALUES (5, "jeans", 35, 20, "4, 5, 6, 7, 8, 9, 10, 11, 12");
+INSERT INTO store VALUES (6, "leggings", 22,10, "s, m, l, xl");
+INSERT INTO store VALUES (7, "yoga pants", 6, 15, "s, m, l, xl, xxl");
+INSERT INTO store VALUES (8, "beanie", 10, 15, "one size");
+INSERT INTO store VALUES (9, "dad hat", 5, 20, "one size");
+INSERT INTO store VALUES (10, "snap back", 15, 25, "s, m, l");
+INSERT INTO store VALUES (11, "cardigan", 27, 15,"s, m, l, xl, xxl");
+INSERT INTO store VALUES (12, "capris", 22, 15, "s, m, l, xl, xxl");
+INSERT INTO store VALUES (13, "sweats", 9, 15,"s, m, l, xl, xxl");
+INSERT INTO store VALUES (14, "turtlenecks", 19, 15, "s, m, l, xl, xxl");
+INSERT INTO store VALUES (15, "cami", 25, 10, "s, m, l, xl, xxl, xxxl");
+
+--display the database ordered by price.
+SELECT * FROM store ORDER BY price asc;
+
+--what is the average price of items in the store?
+SELECT AVG(price) FROM store;
+ 
+ --what items are low on stock?
+SELECT item, price, quantity
+FROM store ORDER BY quantity asc; 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
